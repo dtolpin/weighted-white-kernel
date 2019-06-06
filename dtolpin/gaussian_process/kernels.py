@@ -11,7 +11,7 @@ class WeightedWhiteKernel(StationaryKernelMixin, Kernel):
     where it explains the noise-component of the signal. Tuning
     its parameter corresponds to estimating the noise-level.
 
-    k(x_1, x_2) = weight(x_1)*noise_level if x_1 == x_2 else 0
+    k(x_1, x_2) = noise_weight(x_1)*noise_level if x_1 == x_2 else 0
 
     This is a modification of WhiteKernel taking care of the case
     when different observations have different noise levels.
